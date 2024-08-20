@@ -1,0 +1,6 @@
+.venv/*
+
+cutils/__pycache__/*.pyc
+envfiles/*
+
+mprofile_20240820171723.dat
