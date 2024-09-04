@@ -14,7 +14,7 @@ from epct.po_evolvers import HPCTIndividual, HPCTEvolveProperties, HPCTEvolverWr
 # mprof run evolve\individual.py
 # mprof plot
 
-# @profile
+@profile
 def main():
 
     env_name = 'ARC' 
@@ -55,8 +55,9 @@ def main():
 
     print(f'seed={seed}')
     random.seed(seed)
-    ind = evr.toolbox.individual()
-    print(ind.get_grid())	
+    for i in range(10):
+        ind = evr.toolbox.individual()
+        print(ind.get_grid())	
 
 
 if __name__ == "__main__":
