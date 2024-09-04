@@ -55,9 +55,20 @@ def main():
 
     print(f'seed={seed}')
     random.seed(seed)
-    for i in range(10):
-        ind = evr.toolbox.individual()
-        print(ind.get_grid())	
+
+#     ind_list = []
+#     for i in range(10):
+#         ind = evr.toolbox.individual()
+#         print(ind.get_grid())	
+#         ind_list.append(ind)
+
+    ind = evr.toolbox.individual()
+    print(ind.get_grid())	
+    ind1, = evr.toolbox.mutate(ind, choice=2, add_nodes=2)
+    print(ind.get_grid())	
+    print(ind1.get_grid())	
+    
+
 
 
 if __name__ == "__main__":
